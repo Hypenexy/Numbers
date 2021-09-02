@@ -1,4 +1,4 @@
-
+0 = 0 is nothing. It's literally nothing. <br><br>The ancient Greeks had no symbol for zero (μηδέν), and did not use a digit placeholder for it. They seemed unsure about the status of zero as a number. They asked themselves, \"How can nothing be something?\""
 1 = "$n is the most common leading digit in many sets of data, a consequence of <a href=https://en.wikipedia.org/wiki/Benford%27s_law>Benford's law</a>. <br><br>The glyph used today to represent the number 1, a vertical line, often with a serif at the top and sometimes a short horizontal line at the bottom, traces its roots back to the Brahmic script of ancient India, where it was a simple vertical line. It was transmitted to Europe via Arabic during the Middle Ages."
 2 = "$n is the smallest and only even <a href=https://en.wikipedia.org/wiki/Prime_number>prime number</a>."
 3 = "$n is the first number of π (Pi). You can also type 3.14 to learn more about it."
