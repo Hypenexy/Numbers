@@ -1,0 +1,211 @@
+:root{
+    --gray: #888;
+	--LightGray: #c8c8c8;
+	
+    --backgroundBlack: #05090fd7;
+	--inputColor: #1f1c1e;
+}
+*{font-family: 'Roboto', sans-serif;}
+body {
+	/*background: var(--backgroundBlack);
+	background-image: url('skyeyes.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;*/
+	padding: 0;
+	background-color: var(--inputColor);
+}
+
+::-webkit-scrollbar{width:12px}
+::-webkit-scrollbar-thumb{border-radius:8px;background:#bbb}
+::-webkit-scrollbar-thumb:hover{background:#999}
+::-webkit-scrollbar-thumb:active{background:#777}
+
+
+.main{
+	margin: auto;
+	width: 90%;
+	padding: 10px;
+}
+.interestingstuff{
+	display: none;
+	margin-top: 10px;
+	border-radius: 0px 5px 5px 0px;
+	padding: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	font-size: 24px;
+	width: 90%;
+	color: var(--LightGray);
+	
+	animation-name: opacity, downfall;
+	animation-duration: 0.4s;
+}
+
+.details{
+	position: absolute;
+	margin-top: -15px;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 700;
+	color: var(--gray);
+}
+
+input {
+	width: 100%;
+	font-size: 48px;
+	color: white;
+	background-color: var(--inputColor);
+	border: none;
+	outline: none;
+	border-radius: 0;
+	/*border-image-slice: 1;
+	border-width: 5px;
+	border-image-source: linear-gradient(50deg, rgba(63,89,255,1) 0%, rgba(169,81,251,1) 100%);*/
+	border-bottom: 1px solid white;
+	padding: 12px 15px;
+	
+	animation-name: opacity, width;
+	animation-duration: 0.8s;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0 0 0 1pt white;
+}
+
+.logo {
+	position: relative;
+	left: 120px;
+	top: 10px;
+	width: 40%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.linkless{
+	color: white;
+	text-decoration: none;
+}
+a {
+	color: #65baff;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+p{
+	margin: 0;
+}
+
+.test {
+	position: absolute;
+	left: 55px;
+	bottom: 15px;
+}
+	.test button {
+		height: 32px;
+		width: 32px;
+		cursor: pointer;
+		border-radius: 5px;
+		border: 1px solid var(--LightGray);
+		background: var(--inputColor);
+		color: white;
+		padding: 0px;
+		letter-spacing: 0px;
+		text-transform: none;
+		animation-name: opacity;
+		animation-duration: 7s;
+	}
+	.test i{
+		color: var(--LightGray);
+		font-size: 24px;
+	}
+/*language*/
+.languagespace {
+	position: fixed;
+	left: 15px;
+	bottom: 15px;
+}
+.languagespace button {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid var(--LightGray);
+	background: var(--inputColor);
+	color: white;
+	font-weight: bold;
+	padding: 0px;
+	letter-spacing: 0px;
+	text-transform: none;
+	animation-name: opacity;
+	animation-duration: 7s;
+}
+  .languagespace i{
+	color: var(--LightGray);
+	font-size: 24px;
+  }
+  .languageMenu{
+	box-shadow: 5px 10px 42px black;
+	color: white;
+	background: #302c2e;
+	height: 100px;
+	width: 100px;
+
+	border-radius: 5px;
+	padding: 5px;
+	display: none;
+  }
+  .languageMenua{
+	background-color: var(--inputColor);
+	border-radius: 5px;
+	padding: 2px;
+	line-height: 1.8;
+	cursor: pointer;
+  }
+  .languageMenuBottom {
+	  position: relative;
+	  bottom: -20px;
+  }
+  .fade-in {
+	animation: fadeIn ease 290ms;
+  }
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@keyframes opacity {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes width {
+	from {width: 18%;}
+	to {width: 100%;}
+}
+@keyframes downfall {
+	from {margin-top: -10px;}
+	to {margin-top: 10px;}
+}
+@keyframes colorfy {
+    from {border-image-source: none;}
+    to {border-image-source: linear-gradient(50deg, rgba(63,89,255,1) 0%, rgba(169,81,251,1) 100%);}
+}
+
+@media only screen and (max-width: 425px) {
+	input {
+		font-size: 24px;
+	}
+}
