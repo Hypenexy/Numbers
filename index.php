@@ -1,3 +1,13 @@
+<?php
+if(isset($_POST['n'])){
+  include("number/index.php");
+  exit();
+}
+else if(isset($_GET['n'])){
+  include("number/index.php");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +25,10 @@
   <meta property="og:description" content="Learn interesting facts about numbers.">
   <meta property="og:image" content="../lowpolyc.png">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="script.js"></script>
 </head>
 <body>
-	<div class="main">
+	<div class="mdblock">
     <input id="number" placeholder="Type any number or math expression" autocomplete="off" oninput="create(this.value);">
     <div id="factdiv" class="fact interestingstuff">
       <p class="details">Fact of the number</p>
@@ -29,7 +36,7 @@
     </div>
     <div id="numeraldiv" class="othernumeralsystem interestingstuff">
       <a class="details">Numeral systems</a>
-      <p>Your number in other numeral systems is written like this:</p>
+      <p>Your number in other numeral systems is written like this</p>
       <ul id="numeral">
         <li id="binary" style="display: block;">Binary </li>
         <li id="octal">Octal </li>
@@ -39,31 +46,25 @@
     </div>
     <div id="math" class="othernumeralsystem interestingstuff">
       <p class="details">Math operations</p>
-      <p id="ifnumberisset" style="display:none">Your number calculated with your last number:</p>
+      <p id="ifnumberisset" style="display:none">Your number calculated with your last number</p>
       <ul>
         <li id="plus" style="display: block"> </li>
         <li id="minus" style="display: block"> </li>
         <li id="multiply" style="display: block"> </li>
         <li id="divide" style="display: block"> </li>
       </ul>
-      <p>Your number calculated:</p>
+      <p>Your number calculated</p>
       <ul>
         <li id="power" style="display: block"> </li>
         <li id="size" style="display: block"> </li>
       </ul>
     </div>
     <div id="support" class="othernumeralsystem interestingstuff">
-      <a href="https://midelight.net">Midelight</a>, <a href="https://github.com/Hypenexy/Numbers">Contribute</a>
+      <a href="https://midelight.net">Midelight</a>, <a href="https://github.com/Hypenexy/Numbers">Contribute</a>, <a href="api">API</a>
     </div>
   </div>
-
-	<!-- <div class="languagespace">
-		<div class="languageMenu fade-in" id="languageMenu">
-			<a class="languageMenua">English</a>
-			<a class="languageMenua">Bulgarian</a>
-			<a class="link languageMenuBottom" href="http://midelight.net/contact">Help translate</a>
-		</div>
-		<button id="languageButton" onclick="languageMenuToggle()"><i class="fa fa-globe"></i></button>
-	</div> -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

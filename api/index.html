@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Midelight Numbers</title>
+  <link rel="shortcut icon" href="../lowpolyc.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<div class="mdblock doc">
+    <h1>Midelight Numbers API</h1>
+    <hr>
+    <h2>Introduction</h2>
+    <p>In order to access our wonderful facts of numbers, you can just connect with either a GET or POST request to:</p>
+    <ln><a href="https://midelight.net/Numbers">https://midelight.net/Numbers</a></ln>
+    <h2>Using GET</h2>
+    <p>Here's an example of how you can get a fact just by using your browser's GET function:</p>
+    <ln><a href="https://midelight.net/Numbers?n=12">https://midelight.net/Numbers?n=12</a></ln>
+    <h2>JavaScript Example</h2>
+    <p>I would recommend using jQuery's ajax since it doesn't redirect and it's easy to create POST requests. Here's how I do it:</p>
+    <ln><textarea>$.ajax({
+      url: "number/index.php",
+      type: "post",
+      dataType: 'json',
+      data: {n: eval($id)},
+      success:function(result){
+          setFact(result.fact)
+          setNumeral(result.number)
+          setMath(result.lastnumber, result.number)
+          show()
+      }
+})</textarea></ln>
+    <h2>Response Example</h2>
+    <p>The returned response should contain 3 objects in an array. number, lastnumber, fact. Here's what n=12 responds:</p>
+    <ln>{"number":"12","lastnumber":"12","fact":"12 is a cool number"}</ln>
+</body>
+</html>
